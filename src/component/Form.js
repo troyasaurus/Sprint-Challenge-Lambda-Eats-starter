@@ -57,13 +57,13 @@ const OrderForm = () => {
             Customize Your Pizza
         </h2>
         </Card>
-        <Form onSubmit={(e) => {
+        <Form data-cy='submit' onSubmit={(e) => {
             e.preventDefault()
             console.log(formData);
         }}style={{margin: '5%'}}>
         <FormGroup>
             <legend>Name</legend>
-            <Input type='name' name='name' value={formData.name} onChange={handleChange}/>
+            <Input type='name' name='name' data-cy='name' value={formData.name} onChange={handleChange} />
         </FormGroup>
         <FormGroup>
             <Dropdown isOpen={dropdownOpen} toggle={toggle}>
@@ -92,19 +92,19 @@ const OrderForm = () => {
             <legend>Sauce</legend>
             <FormGroup check>
                 <Label check>
-                    <Input type='radio' name='suace' value='Marinara' onChange={handleChange}/>
+                    <Input type='radio' name='suace' data-cy='checkbox1' value='Marinara' onChange={handleChange}/>
                     Marinara
                 </Label>
             </FormGroup>
 
             <FormGroup check>
                 <Label check>
-                    <Input type='radio' name='suace' value='Extra Cheesey'onChange={handleChange}/>
+                    <Input type='radio' name='suace'data-cy='checkbox2' value='Extra Cheesey'onChange={handleChange}/>
                     Extra Cheesey
                 </Label>
             </FormGroup><FormGroup check>
                 <Label check>
-                    <Input type='radio' name='suace' value='Alfredo'onChange={handleChange}/>
+                    <Input type='radio' name='suace'data-cy='checkbox3' value='Alfredo'onChange={handleChange}/>
                     Alfredo
                 </Label>
             </FormGroup>
